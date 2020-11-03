@@ -324,6 +324,11 @@
   // Software serial
   //
 
+#define X_SERIAL_TX_PIN                       63
+#define X_SERIAL_RX_PIN                       63
+#define Y_SERIAL_TX_PIN                       66 //40
+#define Y_SERIAL_RX_PIN                       66 //40
+
   #ifndef X_SERIAL_TX_PIN
     #define X_SERIAL_TX_PIN                   40
   #endif
