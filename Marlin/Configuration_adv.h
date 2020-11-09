@@ -1678,7 +1678,7 @@
  *
  * Override PROBING_MARGIN for each side of the build plate
  * Useful to get probe points to exact positions on targets or
- * to allow leveling to avoid plate clamps on only specific
+ * to allow leveling to avoid plate clam on only specific
  * sides of the bed. With NOZZLE_AS_PROBE negative values are
  * allowed, to permit probing outside the bed.
  *
@@ -2266,7 +2266,7 @@
   #if AXIS_IS_TMC(X)
     #define X_CURRENT       1000        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
-    #define X_MICROSTEPS     32    // 0..256
+    #define X_MICROSTEPS     16    // 0..256
     #define X_RSENSE          0.11
     #define X_CHAIN_POS      -1    // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
   #endif
@@ -2282,7 +2282,7 @@
   #if AXIS_IS_TMC(Y)
     #define Y_CURRENT       1000
     #define Y_CURRENT_HOME  Y_CURRENT
-    #define Y_MICROSTEPS     32
+    #define Y_MICROSTEPS     16
     #define Y_RSENSE          0.11
     #define Y_CHAIN_POS      -1
   #endif
@@ -2502,12 +2502,12 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  #define HYBRID_THRESHOLD
+  //#define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     150  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     150
-  #define Y2_HYBRID_THRESHOLD    100
+  #define X_HYBRID_THRESHOLD     200  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    200
+  #define Y_HYBRID_THRESHOLD     200
+  #define Y2_HYBRID_THRESHOLD    200
   #define Z_HYBRID_THRESHOLD       3
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
